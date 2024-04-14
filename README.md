@@ -11,3 +11,7 @@ google-auth
 google-auth-oauthlib 
 google-auth-httplib2 
 google-api-python-client
+
+
+#Nota
+Es necesario obtener keys.json desde cuenta google, revisar star_api_gdocs.ipynb
