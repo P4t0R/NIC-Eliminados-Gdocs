@@ -2,7 +2,7 @@
 
 El objetivo de este repositorio es hacer uso de API de Google para poblar un sheet, este será llenado con datos obtenidos desde una página web.
 
-En concreto, se poblará con la lista de los últimos dominios eliminados, por lo tanto disponibles para ser inscritos.
+En concreto, se poblará con la lista de los últimos dominios eliminados en `nic.cl`, por lo tanto disponibles para ser inscritos.
 
 <img alt="Build Status" src="https://raw.githubusercontent.com/P4t0R/NIC-Eliminados-Gdocs/main/img/demo1.png">
 
