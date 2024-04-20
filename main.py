@@ -3,15 +3,14 @@ import requests
 from gdocs_utils import * 
 
 
-
 #Link descarga datos - txt ultima semana nic.cl
 url= 'https://www.nic.cl/registry/Eliminados.do?t=1s&f=txt'
 
 #Realizar la solicitud GET a la página
 response = requests.get(url)
 
-#Ordena dominios
-domains = str(response.content).split('\\')
+#Lista dominios
+domains = response.content.decode('utf-8').split('\n')
 sorted_domains = sorted(set(domains), key=len)
 
 
@@ -25,6 +24,10 @@ for domain in sorted_domains:
             final[len_domain].append(domain)
         else:
             final[len_domain] = [domain]
+
+# Ordenar las listas en el diccionario
+for key, value in final.items():
+    final[key] = sorted(value)
 
 write_dict(final)
 
