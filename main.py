@@ -29,7 +29,6 @@ for domain in sorted_domains:
 for key, value in final.items():
     final[key] = sorted(value)
 
-
 write_dict(final)
 
 #Ruta documento poblado
