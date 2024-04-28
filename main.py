@@ -29,5 +29,9 @@ for domain in sorted_domains:
 for key, value in final.items():
     final[key] = sorted(value)
 
+
 write_dict(final)
+
+#Ruta documento poblado
+print("https://docs.google.com/spreadsheets/d/1HsKlwaKSJz-IJBj_4BXovGGe2XPNvnc6q5xtftRFrW4")
 

@@ -40,6 +40,15 @@ def write_sheet_data(text_list):
 								body={'values':values}).execute()
 	print(f"Datos insertados correctamente.\n{(result.get('updates').get('updatedCells'))}")
 
+
+def clear_sheet():	
+    # Llama a la API para limpiar la hoja
+    request = sheet.values().clear(spreadsheetId=SPREADSHEET_ID, 
+								   range='Hoja 1')
+    response = request.execute()
+    print("Hoja limpiada exitosamente.")
+
+
 def prepare_dict(data):
     """
     Prepara y estructura los datos contenidos en un diccionario para su visualización como tabla.
@@ -77,6 +86,7 @@ def prepare_dict(data):
     return data_out
 
 def write_dict(dict):
+	clear_sheet()
 	data = prepare_dict(dict)
 	write_sheet_data(data)
 
